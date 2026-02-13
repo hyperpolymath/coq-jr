@@ -83,3 +83,6 @@ htmlcov/
 /tmp/
 *.tmp
 *.bak
+
+# Crash recovery artifacts
+ai-cli-crash-capture/
