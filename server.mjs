@@ -1,13 +1,15 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // SPDX-FileCopyrightText: 2025 Coq-Jr Contributors
 
-// Deno HTTP server for Coq-Jr
+// Deno HTTP server for Coq-Jr (plain JS — TS types removed to satisfy
+// the RSR antipattern check; this file is a thin Deno entrypoint that
+// imports the compiled ReScript page renderer.)
 
 const PORT = 8000;
 
 // Import the compiled ReScript page renderer
 // After running `npm run res:build`, the compiled JS will be available
-let getPageHtml: () => string;
+let getPageHtml;
 
 try {
   const mainModule = await import("./src/Main.res.js");
@@ -37,7 +39,7 @@ deno task serve</code></pre>
 </html>`;
 }
 
-const MIME_TYPES: Record<string, string> = {
+const MIME_TYPES = {
   ".html": "text/html",
   ".css": "text/css",
   ".js": "application/javascript",
@@ -52,12 +54,12 @@ const MIME_TYPES: Record<string, string> = {
   ".woff2": "font/woff2",
 };
 
-function getMimeType(path: string): string {
+function getMimeType(path) {
   const ext = path.substring(path.lastIndexOf("."));
   return MIME_TYPES[ext] || "application/octet-stream";
 }
 
-async function serveStaticFile(path: string): Promise<Response | null> {
+async function serveStaticFile(path) {
   try {
     const file = await Deno.readFile(path);
     return new Response(file, {
@@ -68,7 +70,7 @@ async function serveStaticFile(path: string): Promise<Response | null> {
   }
 }
 
-async function handler(request: Request): Promise<Response> {
+async function handler(request) {
   const url = new URL(request.url);
   let pathname = url.pathname;
 

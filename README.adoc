@@ -190,7 +190,7 @@ For AI assistants using the Model Context Protocol:
   "mcpServers": {
     "coq-jr": {
       "command": "deno",
-      "args": ["run", "--allow-net", "mcp-server.ts"],
+      "args": ["run", "--allow-net", "mcp-server.mjs"],
       "env": {
         "COQ_JR_URL": "http://localhost:8000"
       }
@@ -310,7 +310,7 @@ npm run res:build
 deno task dev
 
 # Type check
-deno check server.ts
+deno check server.mjs
 ----
 
 === Testing (Roadmap)
