@@ -4,8 +4,8 @@
   "tasks": {
     "build:res": "npx rescript build",
     "clean:res": "npx rescript clean",
-    "dev": "deno run --allow-net --allow-read server.ts",
-    "serve": "deno run --allow-net --allow-read server.ts"
+    "dev": "deno run --allow-net --allow-read server.mjs",
+    "serve": "deno run --allow-net --allow-read server.mjs"
   },
   "imports": {
     "@std/http": "jsr:@std/http@^1.0.0",
