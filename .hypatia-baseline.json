@@ -1,0 +1,146 @@
+[
+  {
+    "severity": "critical",
+    "rule_module": "structural_drift",
+    "type": "SD001",
+    "file": ".machine_readable/AGENTIC.scm"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "structural_drift",
+    "type": "SD001",
+    "file": ".machine_readable/ECOSYSTEM.scm"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "structural_drift",
+    "type": "SD001",
+    "file": ".machine_readable/META.scm"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "structural_drift",
+    "type": "SD001",
+    "file": ".machine_readable/NEUROSYM.scm"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "structural_drift",
+    "type": "SD001",
+    "file": ".machine_readable/PLAYBOOK.scm"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "structural_drift",
+    "type": "SD001",
+    "file": ".machine_readable/STATE.scm"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "workflow_audit",
+    "type": "actions_expression_injection",
+    "file": "hypatia-scan.yml"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "workflow_audit",
+    "type": "actions_expression_injection",
+    "file": "mirror.yml"
+  },
+  {
+    "severity": "critical",
+    "rule_module": "workflow_audit",
+    "type": "actions_expression_injection",
+    "file": "quality.yml"
+  },
+  {
+    "severity": "high",
+    "rule_module": "cicd_rules",
+    "type": "missing_requirement",
+    "file": ".github/workflows/scorecard.yml"
+  },
+  {
+    "severity": "high",
+    "rule_module": "cicd_rules",
+    "type": "missing_requirement",
+    "file": "permissions: read-all"
+  },
+  {
+    "severity": "high",
+    "rule_module": "git_state",
+    "type": "GS005",
+    "file": "."
+  },
+  {
+    "severity": "high",
+    "rule_module": "honest_completion",
+    "type": "no_tests",
+    "file": "/home/runner/work/coq-jr/coq-jr"
+  },
+  {
+    "severity": "high",
+    "rule_module": "migration_rules",
+    "type": "deprecated_api",
+    "file": "src/Components.res"
+  },
+  {
+    "severity": "high",
+    "rule_module": "migration_rules",
+    "type": "deprecated_api",
+    "file": "src/Page.res"
+  },
+  {
+    "severity": "high",
+    "rule_module": "migration_rules",
+    "type": "deprecated_api",
+    "file": "src/Server.res"
+  },
+  {
+    "severity": "high",
+    "rule_module": "migration_rules",
+    "type": "deprecated_api",
+    "file": "src/Server.res"
+  },
+  {
+    "severity": "high",
+    "rule_module": "root_hygiene",
+    "type": "banned",
+    "file": "AI.a2ml"
+  },
+  {
+    "severity": "high",
+    "rule_module": "root_hygiene",
+    "type": "banned",
+    "file": "AI.djot"
+  },
+  {
+    "severity": "high",
+    "rule_module": "root_hygiene",
+    "type": "banned",
+    "file": "package-lock.json"
+  },
+  {
+    "severity": "high",
+    "rule_module": "structural_drift",
+    "type": "SD002",
+    "file": "contractiles/trust/Trustfile.hs"
+  },
+  {
+    "severity": "high",
+    "rule_module": "structural_drift",
+    "type": "SD003",
+    "file": "AI.djot"
+  },
+  {
+    "severity": "high",
+    "rule_module": "workflow_audit",
+    "type": "download_then_run",
+    "file": "mirror.yml"
+  },
+  {
+    "severity": "high",
+    "rule_module": "workflow_audit",
+    "type": "unsafe_curl_payload",
+    "file": "hypatia-scan.yml"
+  }
+]
