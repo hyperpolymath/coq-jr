@@ -96,7 +96,7 @@ Coq-Jr is one component of a larger formal verification ecosystem:
 === Prerequisites
 
 * https://deno.land[Deno] v2.0+
-* https://nodejs.org[Node.js] v18+ (for ReScript compilation only)
+* https://nodejs.org[Node.js] v18+ (for AffineScript compilation only)
 
 === Installation
 
