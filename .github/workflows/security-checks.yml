@@ -43,7 +43,34 @@ jobs:
         uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v4.5.0
         with:
           fail-on-severity: high
-          deny-licenses: GPL-3.0, AGPL-3.0
+          # Replaces the previous `deny-licenses: GPL-3.0, AGPL-3.0`. The
+          # `deny-licenses` option is deprecated for removal in the next
+          # major release (actions/dependency-review-action#997): when no
+          # SBOM is available it can't actually evaluate a denylist, so it
+          # fails-open silently. `allow-licenses` fails-closed: anything
+          # not on this list (including the strong-copyleft GPL-3.0 /
+          # AGPL-3.0 we want to keep out) blocks the PR.
+          #
+          # Scope: permissive + weak-copyleft licenses compatible with this
+          # repo's PMPL distribution. Adjust if a legitimate dep gets
+          # blocked — do NOT slip GPL-3.0 / AGPL-3.0 back in.
+          allow-licenses: >-
+            Apache-2.0,
+            BSD-2-Clause,
+            BSD-3-Clause,
+            BSD-3-Clause-Clear,
+            CC0-1.0,
+            ISC,
+            LGPL-2.1-only,
+            LGPL-2.1-or-later,
+            LGPL-3.0-only,
+            LGPL-3.0-or-later,
+            MIT,
+            MPL-2.0,
+            PSF-2.0,
+            Python-2.0,
+            Unlicense,
+            Zlib
           comment-summary-in-pr: always
 
   validate-actions:
