@@ -9,7 +9,6 @@
 # For more information: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # Default owners for everything in the repo
-* @hyperpolymath
 
 # Security-critical files (Perimeter 1) - require explicit security review
 /.github/workflows/      @hyperpolymath
