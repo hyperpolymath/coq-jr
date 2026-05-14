@@ -12,7 +12,7 @@ image:https://img.shields.io/badge/License-PMPL--1.0-blue.svg[License: PMPL-1.0,
 :imagesdir: docs/images
 
 [.lead]
-*Coq-Jr* is a lightweight, browser-native interface for the https://coq.inria.fr[Coq proof assistant], built with ReScript and Deno. It provides HTTP and GraphQL access to interactive theorem proving, serving as both a standalone proof environment and a satellite component of the https://github.com/hyperpolymath/poly-proof-mcp[poly-proof-mcp] AI-accessible verification network.
+*Coq-Jr* is a lightweight, browser-native interface for the https://coq.inria.fr[Coq proof assistant], built with AffineScript. It provides HTTP and GraphQL access to interactive theorem proving, serving as both a standalone proof environment and a satellite component of the https://github.com/hyperpolymath/poly-proof-mcp[poly-proof-mcp] AI-accessible verification network.
 
 [discrete]
 == Status: Alpha (v0.2.0-dev)
