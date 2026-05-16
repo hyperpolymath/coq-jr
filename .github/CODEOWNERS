@@ -11,7 +11,6 @@
 # Default owners for everything in the repo
 
 # Security-critical files (Perimeter 1) - require explicit security review
-/.github/workflows/      @hyperpolymath
 /.github/dependabot.yml  @hyperpolymath
 /.github/CODEOWNERS      @hyperpolymath
 /SECURITY.md             @hyperpolymath
