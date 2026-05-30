@@ -2,8 +2,8 @@
   "name": "@coq-jr/web",
   "version": "0.1.0",
   "tasks": {
-    "build:res": "npx rescript build",
-    "clean:res": "npx rescript clean",
+    "build:res": "deno run -A --node-modules-dir=auto npm:rescript build",
+    "clean:res": "deno run -A --node-modules-dir=auto npm:rescript clean",
     "dev": "deno run --allow-net --allow-read server.mjs",
     "serve": "deno run --allow-net --allow-read server.mjs"
   },
