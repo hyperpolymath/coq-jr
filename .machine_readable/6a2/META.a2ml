@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: PMPL-1.0-or-later
+# Copyright (c) 2026 Jonathan D.A. Jewell (hyperpolymath) <j.d.a.jewell@open.ac.uk>
+#
+# META.a2ml — Transpiled from .scm format
+[metadata]
+converted-from-scm = true
+conversion-date = "2026-06-01T01:34:10Z"
+
+;; SPDX-License-Identifier: MPL-2.0
+(meta (metadata (version "0.1.0") (last-updated "2026-02-08"))
+  (project-info (type monorepo) (languages (zig ada gleam idris2 julia ocaml rescript rust swift)) (license "MPL-2.0")))
