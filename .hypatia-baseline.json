@@ -142,5 +142,77 @@
     "rule_module": "workflow_audit",
     "type": "unsafe_curl_payload",
     "file": "hypatia-scan.yml"
+  },
+  {
+    "severity": "high",
+    "rule_module": "honest_completion",
+    "type": "no_tests",
+    "file": "."
+  },
+  {
+    "severity": "medium",
+    "rule_module": "migration_rules",
+    "type": "deprecated_api",
+    "file": "src/Deno.res"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "migration_rules",
+    "type": "deprecated_api",
+    "file": "src/Dom.res"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "migration_rules",
+    "type": "deprecated_api",
+    "file": "src/JsCoq.res"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "structural_drift",
+    "type": "SD007",
+    "file": ".claude/CLAUDE.md"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "structural_drift",
+    "type": "SD022",
+    "file": "ABI-FFI-README.md"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "workflow_audit",
+    "type": "missing_timeout_minutes",
+    "file": "codeql.yml"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "workflow_audit",
+    "type": "missing_timeout_minutes",
+    "file": "instant-sync.yml"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "workflow_audit",
+    "type": "missing_timeout_minutes",
+    "file": "push-email-notify.yml"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "workflow_audit",
+    "type": "missing_timeout_minutes",
+    "file": "security-checks.yml"
+  },
+  {
+    "severity": "medium",
+    "rule_module": "workflow_audit",
+    "type": "missing_timeout_minutes",
+    "file": "workflow-linter.yml"
+  },
+  {
+    "severity": "high",
+    "rule_module": "workflow_audit",
+    "type": "secret_action_without_presence_gate",
+    "file": "instant-sync.yml"
   }
 ]
