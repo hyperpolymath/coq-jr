@@ -29,18 +29,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # Uncomment languages used in your project
-          # - language: rust
-          #   build-mode: manual
-          # - language: go
-          #   build-mode: autobuild
-          # - language: java-kotlin
-          #   build-mode: autobuild
           - language: actions
             build-mode: none
-          # - language: python
-          #   build-mode: none
-
+          - language: javascript-typescript
+            build-mode: none
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7.0.1
