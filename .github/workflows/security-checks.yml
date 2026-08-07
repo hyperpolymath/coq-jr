@@ -1,3 +1,4 @@
+# This workflow is managed by gh actions-lock.
 # SPDX-License-Identifier: MPL-2.0
 # RSR-compliant security validation workflow with SHA-pinned actions
 
@@ -19,12 +20,12 @@ jobs:
       contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
 
       - name: Detect secrets with Gitleaks
-        uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v2.3.8
+        uses: gitleaks/gitleaks-action@v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -37,10 +38,10 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
 
       - name: Dependency Review
-        uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v4.5.0
+        uses: actions/dependency-review-action@v5.0.0
         with:
           fail-on-severity: high
           # Replaces the previous `deny-licenses: GPL-3.0, AGPL-3.0`. The
@@ -80,7 +81,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
 
       - name: Check for unpinned actions
         run: |
@@ -111,7 +112,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
 
       - name: Check required security files exist
         run: |
