@@ -21,7 +21,7 @@ image:https://img.shields.io/badge/License-MPL--2.0-blue.svg[License: PMPL-1.0,l
 == Status: Alpha (v0.2.0-dev)
 
 image:https://img.shields.io/badge/coq-compatible-orange[Coq Compatible]
-image:https://img.shields.io/badge/rescript-v11-red[ReScript]
+image:https://img.shields.io/badge/affinescript-v11-red[AffineScript]
 image:https://img.shields.io/badge/deno-v2-black[Deno]
 
 '''
@@ -109,10 +109,10 @@ Coq-Jr is one component of a larger formal verification ecosystem:
 git clone https://github.com/hyperpolymath/coq-jr.git
 cd coq-jr
 
-# Install ReScript compiler
+# Install AffineScript compiler
 npm install
 
-# Compile ReScript sources
+# Compile AffineScript sources
 npm run res:build
 
 # Start the server
@@ -211,7 +211,7 @@ For AI assistants using the Model Context Protocol:
 |Layer |Technology |Purpose
 
 |*Frontend*
-|ReScript → JavaScript
+|AffineScript → JavaScript
 |Type-safe UI generation and DOM manipulation
 
 |*Server*
@@ -303,7 +303,7 @@ This proof uses the Mathematical Components library to show that for any natural
 
 [source,bash]
 ----
-# Watch mode for ReScript compilation
+# Watch mode for AffineScript compilation
 npm run res:dev
 
 # Production build
@@ -390,7 +390,7 @@ We welcome contributions! Please see link:CONTRIBUTING.adoc[CONTRIBUTING.adoc] f
 === Development Philosophy
 
 * *Minimal dependencies* — Prefer standard library solutions
-* *Type safety* — Leverage ReScript's type system
+* *Type safety* — Leverage AffineScript's type system
 * *Polyglot flexibility* — Support multiple compilation targets (Deno, Node, browser)
 * *Accessibility* — Theorem proving should be approachable
 
