@@ -9,81 +9,65 @@ Thumbs.db
 *~
 .idea/
 .vscode/
-
 # Build
 /target/
 /_build/
 /build/
 /dist/
 /out/
-
 # Dependencies
 /node_modules/
 /vendor/
 /deps/
 /.elixir_ls/
-
 # Rust
 # Cargo.lock  # Keep for binaries
-
 # Elixir
 /cover/
 /doc/
 *.ez
 erl_crash.dump
-
 # Julia
 *.jl.cov
 *.jl.mem
 /Manifest.toml
-
 # ReScript
 /lib/bs/
 /lib/
 /.bsb.lock
 *.res.js
-
 # Deno
 .deno/
 deno.lock
-
 # Python (SaltStack only)
 __pycache__/
 *.py[cod]
 .venv/
-
 # Ada/SPARK
 *.ali
 /obj/
 /bin/
-
 # Haskell
 /.stack-work/
 /dist-newstyle/
-
 # Chapel
 *.chpl.tmp.*
-
 # Secrets
 .env
 .env.*
 *.pem
 *.key
 secrets/
-
 # Test/Coverage
 /coverage/
 htmlcov/
-
 # Logs
 *.log
 /logs/
-
 # Temp
 /tmp/
 *.tmp
 *.bak
-
 # Crash recovery artifacts
 ai-cli-crash-capture/
 target/
@@ -94,7 +78,6 @@ deps/
 .cache/
 build/
 dist/
-
 # npm-avoidant (standards#67): estate JS-runtime policy is Deno>Bun>pnpm>npm.
 # npm lockfiles must never be committed estate-wide.
 package-lock.json
@@ -103,3 +86,27 @@ bun.lockb
 yarn.lock
 pnpm-lock.yaml
 .npmrc
+# Build (unanchored to match nested monorepo paths)
+zig-out/
+zig-cache/
+.zig-cache/
+# ReScript
+# Machine-readable locks
+.machine_readable/.locks/
+# ReScript/OCaml compiler artifacts
+*.cmt
+*.cmti
+*.cmi
+# asdf version manager
+.tool-versions
+# Rust build artefacts (innervation tools)
+inline-annotations/extractor/target/
+k9-coordination-protocol/tools/k9-init/target/
+hooks/playbook-to-recipe/target/
+inline-annotations/extractor/Cargo.lock
+k9-coordination-protocol/tools/k9-init/Cargo.lock
+hooks/playbook-to-recipe/Cargo.lock
+.verisimdb/ecosystem-ingest/target/
+.verisimdb/ecosystem-ingest/Cargo.lock
+# Backup/scratch files (never commit)
+*.backup
