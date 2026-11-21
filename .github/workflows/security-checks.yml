@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v7.0.1
 
       - name: Dependency Review
-        uses: actions/dependency-review-action@v5.0.0
+        uses: actions/dependency-review-action@v5.0.1
         with:
           fail-on-severity: high
           # Replaces the previous `deny-licenses: GPL-3.0, AGPL-3.0`. The
