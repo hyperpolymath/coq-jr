@@ -118,10 +118,19 @@ jobs:
 
       - name: Check required security files exist
         run: |
+          # Accept either a Markdown or AsciiDoc security policy, and a LICENSE
+          # file with or without an extension: this repo keeps SECURITY.adoc
+          # and LICENSE (REUSE texts under LICENSES/).
           MISSING=""
-          for file in SECURITY.md LICENSE.txt .github/CODEOWNERS .github/dependabot.yml; do
-            if [ ! -f "$file" ]; then
-              MISSING="$MISSING $file"
+          for alts in "SECURITY.md SECURITY.adoc" "LICENSE LICENSE.txt LICENSE.md" ".github/CODEOWNERS" ".github/dependabot.yml"; do
+            found=""
+            for file in $alts; do
+              if [ -f "$file" ]; then
+                found=1
+              fi
+            done
+            if [ -z "$found" ]; then
+              MISSING="$MISSING ${alts// /|}"
             fi
           done
           if [ -n "$MISSING" ]; then
@@ -133,7 +142,7 @@ jobs:
       - name: Check for template placeholders
         run: |
           echo "Checking for unfilled template placeholders..."
-          PLACEHOLDERS=$(grep -rE "\{\{[A-Z_]+\}\}" SECURITY.md CONTRIBUTING.md 2>/dev/null || true)
+          PLACEHOLDERS=$(grep -rE "\{\{[A-Z_]+\}\}" SECURITY.md SECURITY.adoc CONTRIBUTING.md .github/CONTRIBUTING.md 2>/dev/null || true)
           if [ -n "$PLACEHOLDERS" ]; then
             echo "::error::Found unfilled template placeholders:"
             echo "$PLACEHOLDERS"
