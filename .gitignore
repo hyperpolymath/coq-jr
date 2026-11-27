@@ -45,7 +45,6 @@ erl_crash.dump
 
 # Deno
 .deno/
-deno.lock
 
 # Python (SaltStack only)
 __pycache__/
@@ -101,5 +100,4 @@ package-lock.json
 **/package-lock.json
 bun.lockb
 yarn.lock
-pnpm-lock.yaml
 .npmrc
